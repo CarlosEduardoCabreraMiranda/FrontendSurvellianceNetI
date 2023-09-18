@@ -1,0 +1,14 @@
+.contenedorp{
+    position: absolute;
+    text-align: center;
+    
+    /* padding: 6% 2% 6% 5%; */
+    
+}
+
+.containerTxt{
+    
+    #formattedTxtB{
+        padding: 1.5vh 1.5vh 0.5vh 1.4vh;
+    }
+}

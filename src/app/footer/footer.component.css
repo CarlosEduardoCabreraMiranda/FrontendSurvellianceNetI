@@ -1,0 +1,45 @@
+
+.footerPositionLC{
+     /* position: absolute;  */
+    bottom: 0px;
+    width: 100%;
+} 
+
+
+.footerbg{
+background-color: rgb(22, 22, 22);
+}
+
+.c1{
+width: 50%;
+}
+
+.c2{
+width: 40%;
+}
+/* Inico Ids propias */
+#lightText{
+    color: white;
+    
+}
+
+.formattedTxtF{
+    padding: 1.5vh 1.5vh 2vh 1.4vh;
+}
+
+/* Boton propio */
+#lightButton{
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vh;
+    text-align: left;
+    margin-bottom: -0.5%;
+}
+/* Fin Ids propias */
+
+/* Clases modificadas de boostrap */
+
+.list-group-item-dark{
+    color: rgb(22, 22, 22);
+    background-color: rgb(22, 22, 22);
+}
