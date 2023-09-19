@@ -1,21 +1,20 @@
 
 .footerPositionLC{
-      /* position: absolute;   */
     bottom: 0px;
     width: 100%;
 } 
 
 
 .footerbg{
-background-color: honeydew;
+background-color: #B8DFF0;
 }
 
 .c1{
-width: 50%;
+width: 65%;
 }
 
 .c2{
-width: 50%;
+width: 25%;
 }
 /* Inico Ids propias */
 #lightText{
