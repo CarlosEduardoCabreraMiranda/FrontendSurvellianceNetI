@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-end align-items-center">
+  <div class="card text-white bg-primary mb-7" style="position: relative; top:2%; left: 50%;">
+    
+    <div class="d-flex justify-content-end align-items-center"></div>
+    <div class="card-header">Clientes</div>
+    <div class="card-body">
+      <h5 class="card-title">Listado de Clientes</h5>
+      <table class="table table-bordered table-striped table-responsive">
+        <thead>
+          <tr class="text-white">
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Fecha Creación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Cliente of clientes">
+            <td class="text-white">{{Cliente.idCliente}}</td>
+            <td class="text-white">{{Cliente.nombre}}</td>
+            <td class="text-white">{{Cliente.apellido}}</td>
+            <td class="text-white">{{Cliente.email}}</td>
+            <td class="text-white">{{Cliente.fechaCreado}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
