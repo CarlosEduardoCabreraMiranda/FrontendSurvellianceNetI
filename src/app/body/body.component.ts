@@ -7,8 +7,7 @@ import { Component } from "@angular/core";
 })
 
 export class BodyComponent{
-    noticias: any ={nombre:'Carlos', apellido:'CM' }
-    title: String = 'televigilancia-app';
-   nombre: String = 'Carlos Eduardo Cabrera Miranda';
-   edad: number = 18;
+    title: String = 'Televigilancia';
+    desarrolladores = [{nombre :'Carlos Eduardo Cabrera Miranda',campo: 'semi-senior'},{nombre :'Juan José Urbano Perdomo',campo: 'Senior'}]
+    fechaCreacion: String = '19/09/2023'
 }

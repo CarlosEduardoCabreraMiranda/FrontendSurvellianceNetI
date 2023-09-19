@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class FooterComponent {
-  title: String= 'Texto aleatorio :)';
+  title: String= 'Este es el footer';
 
   
 }

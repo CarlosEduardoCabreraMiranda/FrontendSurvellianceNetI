@@ -3,5 +3,5 @@ export class Cliente {
     nombre: String;
     apellido: String;
     email: String;
-    FechaCreado: String;
+    fechaCreado: String;
 }
