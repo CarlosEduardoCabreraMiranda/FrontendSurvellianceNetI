@@ -2,8 +2,11 @@
     position: absolute;
     text-align: center;
 }
-p {
-    color:azure
+
+.bg-brown{
+    background-color: brown;
 }
 
-
+.text-azure{
+    color: azure;
+}
