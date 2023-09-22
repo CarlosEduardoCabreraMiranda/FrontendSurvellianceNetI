@@ -2,27 +2,28 @@
   <div class="row">
       <div class="col-sm-12 col-md-5 col-lg-5 col-xl-10 ">
           <h3 style="color: azure">Tabla Clientes</h3><BR>
+            <div class="table-responsive table-bordered ">
+                <table class="table align-middle table-light">
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>email</th>
+                    <th>Fecha Creado</th>
+                    <thead>
+                        <tr></tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cliente of  clientes">
+                            <td>{{cliente.idCliente}}</td>
+                            <td>{{cliente.nombre}}</td>
+                            <td>{{cliente.apellido}}</td>
+                            <td>{{cliente.email}}</td>
+                            <td>{{cliente.fechaCreado}}</td>
+                        </tr>
+                    </tbody>
+                </table><BR>
+            </div>
       </div>
   </div>
-  <div class="table-responsive table-bordered ">
-      <table class="table align-middle table-light">
-          <th>Id</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>email</th>
-          <th>Fecha Creado</th>
-          <thead>
-              <tr></tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let cliente of  clientes">
-                  <td>{{cliente.idCliente}}</td>
-                  <td>{{cliente.nombre}}</td>
-                  <td>{{cliente.apellido}}</td>
-                  <td>{{cliente.email}}</td>
-                  <td>{{cliente.fechaCreado}}</td>
-              </tr>
-          </tbody>
-      </table><BR>
-  </div>
+
 </div>
