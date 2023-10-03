@@ -2,8 +2,14 @@
     position: absolute;
     text-align: center;
 }
-p {
-    color:azure
+
+.bg-brown{
+    overFlow:hidden;
+    border-radius:5%;
+    background-image: url("imagenes/Publi_MiBendicion.png");
+    background-size: cover;
 }
 
-
+.text-azure{
+    color: azure;
+}

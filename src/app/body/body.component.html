@@ -1,37 +1,26 @@
-<div class="container 1"><BR>
-    <figure class="text-center">
-        <h2 style="color:white;">SurvellianceNetI</h2><BR>
-    </figure>
-    <div class="centrar-body">
-        <h4 style="color:azure"> {{title}} es una empresa dedicada a prestar servicios en seguridad.</h4>
-        <h5 style="color:azure"> Desarrolladores de la empresa:</h5>
-        <li>1: {{desarrolladores[0].nombre}}. Rol: {{desarrolladores[0].campo}}</li>
-        <li>2: {{desarrolladores[1].nombre}}. Rol: {{desarrolladores[1].campo}}</li>
-        <li>Fecha Creación: {{fechaCreacion}}</li><BR>
-    </div>
-</div>
 <div class="container 2"><BR>
     <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4 col-lg-4">
-            <h3 style="color:azure"> Nuestro trabajo</h3><BR>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-lg-4 text-azure">
+            <h3> Nuestro trabajo</h3><BR>
             <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-md-4" style="background-color: brown;">
-                        <img src ="">
+                    <div class="col-md-4 bg-brown">
+                        <img src="">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{title}}</h5>
-                            <p style="color:black" class="card-text">Lo mejor en seguridad para tu empresa!
+                            <h5 class="card-title text-dark">{{title}}</h5>
+                            <p class="card-text text-dark">Lo mejor en seguridad para tu empresa!
                                 Televigilancia, tú mejor
                                 opción..</p>
-                            <p style="color:black" class="card-text"><small class="text-body-secondary">imagen x</small>
+                            <p class="card-text text-dark"><small class="text-body-secondary">imagen x</small>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-sm-12 col-md-4 col-lg-4 col-lg-4">
             <h3 style="color: white">Catálogo</h3><BR>
             <div class="table-responsive table-bordered ">
@@ -82,33 +71,33 @@
             <form action="" th:object="" method="">
                 <h3 style="color: white">Cotizar</h3>
                 <BR>
-                <div class="mb-3 ">
+                <div class="mb-3 text-azure">
                     <label for="NombreInput" class="form-label">
                         <p>Nombre</p>
                     </label>
                     <input th:field="*{nombre}" type="text" class="form-control" id="NombreInput" placeholder="">
                 </div>
-                <div class="mb-3 ">
+                <div class="mb-3 text-azure">
                     <label for="DocumentoInput" class="form-label">
                         <p>Documento</p>
                     </label>
                     <input th:field="*{documento}" type="number" class="form-control" id="DocumentoInput"
                         placeholder="">
                 </div>
-                <div class="mb-3 ">
+                <div class="mb-3 text-azure">
                     <label for="emailInput" class="form-label">
                         <p>Email</p>
                     </label>
                     <input th:field="*{email}" type="email" class="form-control" id="emailInput" placeholder="">
                 </div>
 
-                <div class="mb-3 ">
+                <div class="mb-3 text-azure">
                     <label for="TelefonoInput" class="form-label">
                         <p>Teléfono</p>
                     </label>
                     <input th:field="*{telefono}" type="number" class="form-control" id="TelefonoInput" placeholder="">
                 </div>
-                <label for="TipoProductoCombox" class="form-label">
+                <label for="TipoProductoCombox" class="form-label text-azure">
                     <p>Producto</p>
                 </label>
                 <select th:field="*{tipoProducto}" class="form-select form-select-sm" aria-label=".form-select-sm "
