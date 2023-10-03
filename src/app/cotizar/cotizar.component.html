@@ -1,0 +1,30 @@
+<div class="container">
+    <h4 style="color: azure">Cotización</h4><BR>
+    <form action="" th:object="" method="">
+        <div class="mb-3 text-azure">
+            <label for="NombreInput" class="form-label">
+                <p>Nombre</p>
+            </label>
+            <input th:field="*{nombre}" type="text" class="form-control" id="NombreInput" placeholder="">
+        </div>
+        <div class="mb-3 text-azure">
+            <label for="DocumentoInput" class="form-label">
+                <p>Documento</p>
+            </label>
+            <input th:field="*{documento}" type="number" class="form-control" id="DocumentoInput" placeholder="">
+        </div>
+        <div class="mb-3 text-azure">
+            <label for="emailInput" class="form-label">
+                <p>Email</p>
+            </label>
+            <input th:field="*{email}" type="email" class="form-control" id="emailInput" placeholder="">
+        </div>
+
+        <div class="mb-3 text-azure">
+            <label for="TelefonoInput" class="form-label">
+                <p>Teléfono</p>
+            </label>
+            <input th:field="*{telefono}" type="number" class="form-control" id="TelefonoInput" placeholder="">
+        </div>
+    </form>
+</div>

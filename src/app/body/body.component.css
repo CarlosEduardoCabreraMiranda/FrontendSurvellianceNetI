@@ -1,10 +1,17 @@
-.contenedorp{
-    position: absolute;
-    text-align: center;
+:root{
+    --main-border-radius: 5%
 }
 
-.bg-brown{
-    background-color: brown;
+.card-container{
+    border-radius: 5%
+}
+
+.img-Container{
+    overflow: hidden;
+    border-radius: 5%;
+    background-image: url("/imagenes/1.png");
+    background-size: cover-1;
+
 }
 
 .text-azure{

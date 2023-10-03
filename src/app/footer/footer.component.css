@@ -6,7 +6,7 @@
 
 
 .footerbg{
-background-color: #B8DFF0;
+background-color: #F2F7A1;
 }
 
 .c1{
@@ -21,9 +21,7 @@ width: 25%;
     color: rgb(26, 24, 24);
 }
 
-.formattedTxtF{
-    padding: 1.5vh 1.5vh 2vh 1.4vh;
-}
+
 
 /* Clases modificadas de boostrap */
 
