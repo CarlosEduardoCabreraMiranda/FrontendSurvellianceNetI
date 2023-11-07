@@ -1,4 +1,12 @@
 #logo{
     max-width: 20vh;
     max-height: 12vh;
+    transition: transform 0.7s, filter 0.6s;
+}
+
+
+
+#logo:hover{
+    transform: scale(1.2);
+    filter: brightness(1.1);
 }

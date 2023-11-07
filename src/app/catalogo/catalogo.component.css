@@ -1,0 +1,15 @@
+#hoverable{
+    transition: transform 0.7s, filter 0.6s;
+}
+
+.text-hover{
+    transition: filter 0.6s;
+}
+.text-hover:hover{
+    font-weight: bolder;
+}
+
+#hoverable:hover{
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}
