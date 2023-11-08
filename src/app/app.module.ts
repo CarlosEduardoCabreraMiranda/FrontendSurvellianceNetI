@@ -14,7 +14,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { CatalogoService } from './catalogo/catalogo.service';
 import { HomeComponent } from './home/home.component';
 import { CotizarComponent } from './cotizar/cotizar.component';
-
+import { HttpClientModule } from '@angular/common/http'
 const routes: Routes = [
  {path: '', redirectTo:'./home', pathMatch: "full"},
  {path: 'home', component: HomeComponent},
@@ -38,7 +38,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ClienteService,CatalogoService],
