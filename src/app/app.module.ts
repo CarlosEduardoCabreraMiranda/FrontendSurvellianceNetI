@@ -14,14 +14,16 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { CatalogoService } from './catalogo/catalogo.service';
 import { HomeComponent } from './home/home.component';
 import { CotizarComponent } from './cotizar/cotizar.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { EmpleadosComponent } from './empleados/empleados.component'
 const routes: Routes = [
  {path: '', redirectTo:'./home', pathMatch: "full"},
  {path: 'home', component: HomeComponent},
  {path: 'nosotros', component: NosotrosComponent},
  {path: 'catalogo', component: CatalogoComponent},
  {path: 'clientes', component: ClientesComponent},
- {path: 'cotizar', component: CotizarComponent}
+ {path: 'cotizar', component: CotizarComponent},
+ {path: 'empleados', component: EmpleadosComponent}
 ]
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ const routes: Routes = [
     ClientesComponent,
     CatalogoComponent,
     HomeComponent,
-    CotizarComponent
+    CotizarComponent,
+    EmpleadosComponent
     
   ],
   imports: [
@@ -41,7 +44,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ClienteService,CatalogoService],
+  providers: [ClienteService,CatalogoService,ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
