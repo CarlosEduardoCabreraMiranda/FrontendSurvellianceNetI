@@ -20,6 +20,7 @@
                                       <th>fechaIngreso</th>
                                       <th>cargo</th>
                                       <th>salario</th>
+                                      <th>Editar</th>
                                   </tr>
                                   <thead>
                                       <tr></tr>
@@ -38,6 +39,7 @@
                                       <td>{{empleado.fechaIngreso}}</td>
                                       <td>{{empleado.cargo}}</td>
                                       <td>{{empleado.salario}}</td>
+                                      <td><input type="button" name="button" class="btn btn-warning" [routerLink]="['/empleados/form',empleado.identificacion]" value="Editar"></td>
                                   </tr>
                               </tbody>
                           </table>

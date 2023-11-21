@@ -5,41 +5,41 @@
         <label for="Idinput" class="form-label">
           <p>Identificación</p>
         </label>
-        <input type="text" id="Idinput" name="id" class="form-control" [(ngModel)]="empleado.identificacion" placeholder="">
+        <input type="number" id="Idinput" name="id" class="form-control" [(ngModel)]="empleado.identificacion" placeholder="">
       </div>
   
       <div class="mb-3 text-azure">
         <label for="PNInput" class="form-label">
           <p>Primer Nombre</p>
         </label>
-        <input type="text" class="form-control" id="PNInput" name="primerNombre" [(ngModel)]="empleado.primerNombre" placeholder="">
+        <input type="text" class="form-control" id="PNInput" name="primerNombre" [(ngModel)]="empleado.primer_nombre" placeholder="">
       </div>
       <div class="mb-3 text-azure">
         <label for="SNInput" class="form-label">
           <p>Segundo Nombre</p>
         </label>
-        <input type="text" class="form-control" id="SNInput" name="segundoNombre" [(ngModel)]="empleado.segundoNombre" placeholder="">
+        <input type="text" class="form-control" id="SNInput" name="segundoNombre" [(ngModel)]="empleado.segundo_nombre" placeholder="">
       </div>
   
       <div class="mb-3 text-azure">
         <label for="PAInput" class="form-label">
           <p>Primer Apellido</p>
         </label>
-        <input type="text" class="form-control" id="PAInput" name="primerApellido" [(ngModel)]="empleado.primerApellido" placeholder="">
+        <input type="text" class="form-control" id="PAInput" name="primerApellido" [(ngModel)]="empleado.primer_apellido" placeholder="">
       </div>
   
       <div class="mb-3 text-azure">
         <label for="SAInput" class="form-label">
           <p>Segundo Apellido</p>
         </label>
-        <input type="text" class="form-control" id="SAInput" name="segundoApellido" [(ngModel)]="empleado.segundoApellido" placeholder="">
+        <input type="text" class="form-control" id="SAInput" name="segundoApellido" [(ngModel)]="empleado.segundo_apellido" placeholder="">
       </div>
   
       <div class="mb-3 text-azure">
         <label for="FNInput" class="form-label">
           <p>Fecha de Nacimiento</p>
         </label>
-        <input type="date" class="form-control" id="FNInput" name="fechaNacimiento" [(ngModel)]="empleado.fechaNacimiento" placeholder="">
+        <input type="date" class="form-control" id="FNInput" name="fechaNacimiento" [(ngModel)]="empleado.fecha_nacimiento" placeholder="">
       </div>
   
       <div class="mb-3 text-azure">
@@ -74,7 +74,7 @@
         <label for="FIInput" class="form-label">
           <p>Fecha de Ingreso</p>
         </label>
-        <input type="date" class="form-control" id="FIInput" name="fechaIngreso" [(ngModel)]="empleado.fechaIngreso" placeholder="">
+        <input type="date" class="form-control" id="FIInput" name="fechaIngreso" [(ngModel)]="empleado.fecha_ingreso" placeholder="">
       </div>
         <div class="mb-3 text-azure">
             <label for="CInput" class="form-label">
@@ -87,10 +87,10 @@
             <label for="SInput" class="form-label">
                 <p>Salario</p>
             </label>
-            <input type="text" class="form-control" [(ngModel)]="empleado.salario" id="SInput" name="salario" placeholder="">
+            <input type="number" class="form-control" [(ngModel)]="empleado.salario" id="SInput" name="salario" placeholder="">
         </div>
         <div class="mb-3 text-azure">
-            <button class="btn btn-sucess" role="button">Guardar</button>
+            <button routerLink="../" class="btn btn-primary" role="button">Guardar</button>
         </div>
     </form>
 </div>
