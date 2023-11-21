@@ -1,4 +1,4 @@
-export class Cliente {
+export class Empleado {
     identificacion!: string;
     primerNombre!: string;
     segundoNombre!: string;
@@ -9,8 +9,9 @@ export class Cliente {
     telefono!: string;
     usuario!: string;
     password!: string;
-    ocupacion!: string;
-    
+    fechaIngreso!: string;
+    cargo!: string;
+    salario!: string;
 }
 
 /*

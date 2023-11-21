@@ -1,63 +1,31 @@
-<div class="container 1">
-    <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-6 col-lg-2">
-            <h3 style="color: white;">Catálogo</h3><BR>
+<div class="container">
+            <h1 style="color: white;" class="text-hover pt-1">Catálogo</h1><BR>
             <div class="table-responsive table-bordered ">
                 <table class="table align-middle table-light">
-                    <th>Id</th>
+                    <th>codigo</th>
                     <th>Marca</th>
                     <th>Nombre</th>
                     <th>Costo</th>
                     <th>Caracteristicas</th>
-                    <th>fechaCreado</th>
+                    <th>Garantia</th>
+                    <th>Referencia</th>
                     <thead>
                         <tr></tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let producto of catalogos ">
-                            <td>{{producto.id}}</td>
+                      <tr *ngFor="let producto of catalogos ">
+                            <td>{{producto.codigoProducto}}</td>
+                            <td class="text-hover">{{producto.nombre}}</td>
                             <td>{{producto.marca}}</td>
-                            <td>{{producto.nombre}}</td>
                             <td>{{producto.costo}}</td>
                             <td>{{producto.caracteristicas}}</td>
-                            <td>{{producto.fechaCreado}}</td>
+                            <td>{{producto.garantia}}</td>
+                            <td>{{producto.referencia}}</td>
                         </tr>
-                        <!-- <tr>
-                            <td>Marca x</td>
-                            <td>Camara x</td>
-                            <td>$189.999</td>
-                            <td>Buena, bonita y barata</td>
-                        </tr>
-                        <tr>
-                            <td>Dahua</td>
-                            <td>Cámara 2MP Full Color</td>
-                            <td>$90.000</td>
-                            <td>Full color, 30 Fps, Angulo de visión 95º</td>
-                        </tr>
-                        <tr>
-                            <td>AthmelStart</td>
-                            <td>Sirena 30 vatios</td>
-                            <td>$80.000</td>
-                            <td>Sonido tipo hawaiano, dos tonos diferentes, alcance</td>
-                        </tr>
-                        <tr>
-                            <td>Marca x</td>
-                            <td>Camara x</td>
-                            <td>$189.999</td>
-                            <td>Buena, bonita y barata</td>
-                        </tr>
-                        <tr>
-                            <td>Marca x</td>
-                            <td>Camara x</td>
-                            <td>$189.999</td>
-                            <td>Buena, bonita y barata</td>
-                        </tr> -->
+                       
                     </tbody>
                 </table><BR>
             </div>
-            <button type="button" class="btn btn-warning">Cotizar Producto</button>
+            <button type="button" class="btn btn-warning" routerLink="cotizar" id="hoverable">Cotizar Producto</button>
         </div>
-    </div>
-    
-</div>
 

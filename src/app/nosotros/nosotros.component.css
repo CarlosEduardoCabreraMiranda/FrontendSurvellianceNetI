@@ -1,11 +1,42 @@
-.text-azure{
+.text-azure {
     color: azure;
 }
-.bg-brown{
+
+.bg-brown {
     overflow: hidden;
     border-radius: 5%;
     max-height: 100vh;
     max-width: 70vh;
-    background-image: url('/assets/DiseñoLogo.jpeg');
-    background-size: cover;
+}
+
+#logocardimg {
+    height: 100%;
+}
+
+#hoverable {
+    transition: transform 0.7s, filter 0.6s;
+}
+
+#hoverable:hover {
+    transform: scale(1.07);
+    filter: brightness(1.1);
+}
+
+.right {
+    transition: transform 0.7s, font-weight 0.3s, background-color 0.5s;
+}
+
+.right:hover {
+
+    font-weight: bolder;
+    transform: scale(1.01);
+    background-color: #F2F7A1;
+
+    .title{
+        color: black
     }
+
+    .mb-2 {
+        color: black;
+    }
+}

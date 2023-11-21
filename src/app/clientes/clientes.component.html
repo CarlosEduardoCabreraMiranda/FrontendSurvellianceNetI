@@ -1,29 +1,38 @@
 <div class="container 1">
-  <div class="row">
-      <div class="col-sm-12 col-md-5 col-lg-5 col-xl-10 ">
-          <h3 style="color: azure">Tabla Clientes</h3><BR>
-            <div class="table-responsive table-bordered ">
-                <table class="table align-middle table-light">
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>email</th>
-                    <th>Fecha Creado</th>
-                    <thead>
-                        <tr></tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let cliente of  clientes">
-                            <td>{{cliente.idCliente}}</td>
-                            <td>{{cliente.nombre}}</td>
-                            <td>{{cliente.apellido}}</td>
-                            <td>{{cliente.email}}</td>
-                            <td>{{cliente.fechaCreado}}</td>
-                        </tr>
-                    </tbody>
-                </table><BR>
-            </div>
-      </div>
-  </div>
-
-</div>
+        <h3 style="color: white;" class="text-hover pt-1">Tabla Clientes.</h3><BR>
+        <div class="table-responsive table-bordered">
+            <table class="table align-middle table-light">
+                <tr>
+                    <th>Identificación</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Ocupación</th>
+                </tr>
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of clientes">
+                        <td>{{cliente.identificacion}}</td>
+                        <td>{{cliente.primerNombre}}</td>
+                        <td>{{cliente.segundoNombre}}</td>
+                        <td>{{cliente.primerApellido}}</td>
+                        <td>{{cliente.segundoApellido}}</td>
+                        <td>{{cliente.fechaNacimiento}}</td>
+                        <td>{{cliente.direccion}}</td>
+                        <td>{{cliente.telefono}}</td>
+                        <td>{{cliente.usuario}}</td>
+                        <td>{{cliente.password}}</td>
+                        <td>{{cliente.ocupacion}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -10,6 +10,7 @@ import { CatalogoService } from './catalogo.service';
 })
 export class CatalogoComponent {
    catalogos: Catalogo[]
+   
    constructor(private catalogoService:CatalogoService){}
 
 ngOnInit():void {
