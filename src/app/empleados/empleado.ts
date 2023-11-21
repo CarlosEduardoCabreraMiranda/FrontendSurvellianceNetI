@@ -1,5 +1,5 @@
 export class Empleado {
-    identificacion!: number;
+    identificacion!: string;
     primerNombre!: string;
     segundoNombre!: string;
     primerApellido!: string;
@@ -11,7 +11,7 @@ export class Empleado {
     password!: string;
     fechaIngreso!: string;
     cargo!: string;
-    salario!: number;
+    salario!: string;
 }
 
 /*

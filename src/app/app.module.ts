@@ -15,7 +15,11 @@ import { CatalogoService } from './catalogo/catalogo.service';
 import { HomeComponent } from './home/home.component';
 import { CotizarComponent } from './cotizar/cotizar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EmpleadosComponent } from './empleados/empleados.component'
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { FormsModule } from '@angular/forms';
+import { FormComponent } from './empleados/form.component'
+import { EmpleadoService } from './empleados/empleado.service';
+
 const routes: Routes = [
  {path: '', redirectTo:'./home', pathMatch: "full"},
  {path: 'home', component: HomeComponent},
@@ -23,7 +27,8 @@ const routes: Routes = [
  {path: 'catalogo', component: CatalogoComponent},
  {path: 'clientes', component: ClientesComponent},
  {path: 'cotizar', component: CotizarComponent},
- {path: 'empleados', component: EmpleadosComponent}
+ {path: 'empleados', component: EmpleadosComponent},
+ { path: 'empleados/form', component: FormComponent}
 ]
 @NgModule({
   declarations: [
@@ -36,15 +41,17 @@ const routes: Routes = [
     CatalogoComponent,
     HomeComponent,
     CotizarComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    FormComponent
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ClienteService,CatalogoService,ClienteService],
+  providers: [ClienteService,CatalogoService,EmpleadoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
