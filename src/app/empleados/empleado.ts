@@ -1,17 +1,17 @@
 export class Empleado {
-    identificacion!: string;
-    primerNombre!: string;
-    segundoNombre!: string;
-    primerApellido!: string;
-    segundoApellido!: string;
-    fechaNacimiento!: string;
+    identificacion!: number;
+    primer_nombre!: string;
+    segundo_nombre!: string;
+    primer_apellido!: string;
+    segundo_apellido!: string;
+    fecha_nacimiento!: string;
     direccion!: string;
     telefono!: string;
     usuario!: string;
     password!: string;
-    fechaIngreso!: string;
+    fecha_ingreso!: string;
     cargo!: string;
-    salario!: string;
+    salario!: number;
 }
 
 /*
