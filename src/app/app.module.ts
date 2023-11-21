@@ -5,16 +5,23 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { leftComponent } from './left/left.component';
-import { DirectivaComponent } from './directiva/directiva.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ClienteService } from './clientes/cliente.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { CatalogoService } from './catalogo/catalogo.service';
+import { HomeComponent } from './home/home.component';
+import { CotizarComponent } from './cotizar/cotizar.component';
 
 const routes: Routes = [
- {path: '', redirectTo:'./clientes', pathMatch: "full"},
- {path: 'directivas', component: DirectivaComponent},
- {path: 'clientes', component: ClientesComponent}
+ {path: '', redirectTo:'./home', pathMatch: "full"},
+ {path: 'home', component: HomeComponent},
+ {path: 'nosotros', component: NosotrosComponent},
+ {path: 'catalogo', component: CatalogoComponent},
+ {path: 'clientes', component: ClientesComponent},
+ {path: 'cotizar', component: CotizarComponent}
 ]
 @NgModule({
   declarations: [
@@ -23,7 +30,10 @@ const routes: Routes = [
     FooterComponent,
     BodyComponent,
     leftComponent,
-    ClientesComponent
+    ClientesComponent,
+    CatalogoComponent,
+    HomeComponent,
+    CotizarComponent
     
   ],
   imports: [
@@ -31,7 +41,7 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ClienteService],
+  providers: [ClienteService,CatalogoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

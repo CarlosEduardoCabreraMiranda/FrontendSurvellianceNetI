@@ -1,0 +1,11 @@
+.text-azure{
+    color: azure;
+}
+.bg-brown{
+    overflow: hidden;
+    border-radius: 5%;
+    max-height: 100vh;
+    max-width: 70vh;
+    background-image: url('/assets/DiseñoLogo.jpeg');
+    background-size: cover;
+    }
