@@ -19,8 +19,6 @@ export class EmpleadoService {
 
   constructor(private http: HttpClient) { }
 
-
-
   //Obtención de empleados
   getEmpleados(): Observable<Empleado[]> {
     this.http.get<Empleado[]>(this.urlEndpoint);

@@ -1,50 +1,46 @@
 <div class="container 1">
-        <div class="col-sm-12 col-md-5 col-lg-7 col-lg-4">
-            <h3 style="color: white;" class="text-hover pt-1">Tabla de Clientes.</h3><BR>
-                      <div class="table-responsive table-bordered">
-                          <table class="table align-middle table-light">
-                              
-                                  <tr>
-                                      <th>primerNombre</th>
-                                      <th>segundoNombre</th>
-                                      <th>primerApellido</th>
-                                      <th>segundoApellido</th>
-                                      <th>fechaNacimiento</th>
-                                      <th>direccion</th>
-                                      <th>telefono</th>
-                                      <th>usuario</th>
-                                      <th>password</th>
-                                      <th>fechaIngreso</th>
-                                      <th>cargo</th>
-                                      <th>salario</th>
-                                      <th>Editar</th>
-                                  </tr>
-                                  <thead>
-                                      <tr></tr>
-                              </thead>
-                              <tbody>
-                                  <tr *ngFor="let empleado of empleados">
-                                      <td>{{empleado.primerNombre}}</td>
-                                      <td>{{empleado.segundoNombre}}</td>
-                                      <td>{{empleado.primerApellido}}</td>
-                                      <td>{{empleado.segundoApellido}}</td>
-                                      <td>{{empleado.fechaNacimiento}}</td>
-                                      <td>{{empleado.direccion}}</td>
-                                      <td>{{empleado.telefono}}</td>
-                                      <td>{{empleado.usuario}}</td>
-                                      <td>{{empleado.password}}</td>
-                                      <td>{{empleado.fechaIngreso}}</td>
-                                      <td>{{empleado.cargo}}</td>
-                                      <td>{{empleado.salario}}</td>
-                                      <td><input type="button" name="button" class="btn btn-warning" [routerLink]="['/empleados/form',empleado.identificacion]" value="Editar"></td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                      <div class="my-3 text-left">
-
-                        <button type="button" class="btn btn-warning" [routerLink]="['/empleados/form']">Agregar</button>
-                      </div>
+        <h1 style="color: white;" class="text-hover pt-1">Tabla de Empleados.</h1><BR>
+        <div class="table-responsive table-bordered">
+            <table class="table align-middle table-light">
+                <tr>
+                    <th>Identificación</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Usuario</th>
+                    <th>FechaIngreso</th>
+                    <th>Cargo</th>
+                    <th>Salario</th>
+                </tr>
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let empleado of empleados">
+                        <td>{{empleado.identificacion}}</td>
+                        <td>{{empleado.primerNombre}}</td>
+                        <td>{{empleado.segundoNombre}}</td>
+                        <td>{{empleado.primerApellido}}</td>
+                        <td>{{empleado.segundoApellido}}</td>
+                        <td>{{empleado.fechaNacimiento}}</td>
+                        <td>{{empleado.direccion}}</td>
+                        <td>{{empleado.telefono}}</td>
+                        <td>{{empleado.usuario}}</td>
+                        <td>{{empleado.fechaIngreso}}</td>
+                        <td>{{empleado.cargo}}</td>
+                        <td>{{empleado.salario}}</td>
+                        <td><input type="button" name="button" class="btn btn-warning" [routerLink]="['/empleados/form',empleado.identificacion]" value="Editar">
+                            <input type="button" name="button" class="btn btn-danger" [routerLink]="['/empleados/form',empleado.identificacion]" value="Eliminar"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="my-3 text-left">
+            <button class="btn btn-warning btn btn-rounded" type="button"
+                [routerLink]="['/empleados/form']">Agregar</button>
         </div>
     </div>
-

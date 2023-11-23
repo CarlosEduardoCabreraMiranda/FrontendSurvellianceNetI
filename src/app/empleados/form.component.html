@@ -1,96 +1,107 @@
 <div class="container">
-    <h4 style="color: azure">{{titulo}}</h4><BR>
-    <form (ngSubmit)="create()">
-      <div class="mb-3 text-azure">
-        <label for="Idinput" class="form-label">
-          <p>Identificación</p>
-        </label>
-        <input type="number" id="Idinput" name="id" class="form-control" [(ngModel)]="empleado.identificacion" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="PNInput" class="form-label">
-          <p>Primer Nombre</p>
-        </label>
-        <input type="text" class="form-control" id="PNInput" name="primerNombre" [(ngModel)]="empleado.primer_nombre" placeholder="">
-      </div>
-      <div class="mb-3 text-azure">
-        <label for="SNInput" class="form-label">
-          <p>Segundo Nombre</p>
-        </label>
-        <input type="text" class="form-control" id="SNInput" name="segundoNombre" [(ngModel)]="empleado.segundo_nombre" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="PAInput" class="form-label">
-          <p>Primer Apellido</p>
-        </label>
-        <input type="text" class="form-control" id="PAInput" name="primerApellido" [(ngModel)]="empleado.primer_apellido" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="SAInput" class="form-label">
-          <p>Segundo Apellido</p>
-        </label>
-        <input type="text" class="form-control" id="SAInput" name="segundoApellido" [(ngModel)]="empleado.segundo_apellido" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="FNInput" class="form-label">
-          <p>Fecha de Nacimiento</p>
-        </label>
-        <input type="date" class="form-control" id="FNInput" name="fechaNacimiento" [(ngModel)]="empleado.fecha_nacimiento" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="DInput" class="form-label">
-          <p>Dirección</p>
-        </label>
-        <input type="text" class="form-control" id="DInput" name="direccion" [(ngModel)]="empleado.direccion" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="TelefonoInput" class="form-label">
-          <p>Teléfono</p>
-        </label>
-        <input type="tel" class="form-control" id="TelefonoInput" name="telefono" [(ngModel)]="empleado.telefono" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="UInput" class="form-label">
-          <p>Usuario</p>
-        </label>
-        <input type="text" class="form-control" id="UInput" name="usuario" [(ngModel)]="empleado.usuario" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="PInput" class="form-label">
-          <p>Contraseña</p>
-        </label>
-        <input type="password" class="form-control" id="PInput" name="password" [(ngModel)]="empleado.password" placeholder="">
-      </div>
-  
-      <div class="mb-3 text-azure">
-        <label for="FIInput" class="form-label">
-          <p>Fecha de Ingreso</p>
-        </label>
-        <input type="date" class="form-control" id="FIInput" name="fechaIngreso" [(ngModel)]="empleado.fecha_ingreso" placeholder="">
-      </div>
-        <div class="mb-3 text-azure">
-            <label for="CInput" class="form-label">
-                <p>Cargo</p>
-            </label>
-            <input type="text" class="form-control" [(ngModel)]="empleado.cargo" id="CInput" name="cargo" placeholder="">
-        </div>
+  <h4 style="color: azure">{{titulo}}</h4><BR>
+  <form (ngSubmit)="create()">
+    <div class="mb-3 text-azure">
+      <label for="Identificación" class="form-label">
+        <p>Identificación</p>
+      </label>
+      <input type="number" id="Idinput" name="id" class="form-control" [(ngModel)]="empleado.identificacion"
+        placeholder="">
+    </div>
 
-        <div class="mb-3 text-azure">
-            <label for="SInput" class="form-label">
-                <p>Salario</p>
-            </label>
-            <input type="number" class="form-control" [(ngModel)]="empleado.salario" id="SInput" name="salario" placeholder="">
-        </div>
-        <div class="mb-3 text-azure">
-            <button routerLink="../" class="btn btn-primary" role="button">Guardar</button>
-        </div>
-    </form>
+    <div class="mb-3 text-azure">
+      <label for="primer_nombre" class="form-label">
+        <p>Primer Nombre</p>
+      </label>
+      <input type="text" class="form-control" id="PNInput" name="primerNombre" [(ngModel)]="empleado.primer_nombre"
+        placeholder="">
+    </div>
+    
+    <div class="mb-3 text-azure">
+      <label for="segundo_nombre" class="form-label">
+        <p>Segundo Nombre</p>
+      </label>
+      <input type="text" class="form-control" id="SNInput" name="segundoNombre" [(ngModel)]="empleado.segundo_nombre"
+        placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="primer_apellido" class="form-label">
+        <p>Primer Apellido</p>
+      </label>
+      <input type="text" class="form-control" id="PAInput" name="primerApellido" [(ngModel)]="empleado.primer_apellido"
+        placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="segundo_apellido" class="form-label">
+        <p>Segundo Apellido</p>
+      </label>
+      <input type="text" class="form-control" id="SAInput" name="segundoApellido" [(ngModel)]="empleado.segundo_apellido" placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="fecha_nacimiento" class="form-label">
+        <p>Fecha de Nacimiento</p>
+      </label>
+      <input type="date" class="form-control" id="FNInput" name="fechaNacimiento"
+        [(ngModel)]="empleado.fecha_nacimiento" placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="direccion" class="form-label">
+        <p>Dirección</p>
+      </label>
+      <input type="text" class="form-control" id="DInput" name="direccion" [(ngModel)]="empleado.direccion"
+        placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="telefono" class="form-label">
+        <p>Teléfono</p>
+      </label>
+      <input type="tel" class="form-control" id="TelefonoInput" name="telefono" [(ngModel)]="empleado.telefono"
+        placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="usuario" class="form-label">
+        <p>Usuario</p>
+      </label>
+      <input type="text" class="form-control" id="UInput" name="usuario" [(ngModel)]="empleado.usuario" placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="password" class="form-label">
+        <p>Contraseña</p>
+      </label>
+      <input type="password" class="form-control" id="PInput" name="password" [(ngModel)]="empleado.password"
+        placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="fecha_ingreso" class="form-label">
+        <p>Fecha de Ingreso</p>
+      </label>
+      <input type="date" class="form-control" id="FIInput" name="fechaIngreso" [(ngModel)]="empleado.fecha_ingreso"
+        placeholder="">
+    </div>
+    <div class="mb-3 text-azure">
+      <label for="cargo" class="form-label">
+        <p>Cargo</p>
+      </label>
+      <input type="text" class="form-control" [(ngModel)]="empleado.cargo" id="CInput" name="cargo" placeholder="">
+    </div>
+
+    <div class="mb-3 text-azure">
+      <label for="salario" class="form-label">
+        <p>Salario</p>
+      </label>
+      <input type="number" class="form-control" [(ngModel)]="empleado.salario" id="SInput" name="salario"
+        placeholder="">
+    </div>
+    <div class="mb-3 text-azure">
+      <button class="btn btn-warning" role="button">Guardar</button>
+    </div>
+  </form>
 </div>

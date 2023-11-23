@@ -13,12 +13,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { CatalogoService } from './catalogo/catalogo.service';
 import { HomeComponent } from './home/home.component';
-import { CotizarComponent } from './cotizar/cotizar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { FormsModule } from '@angular/forms';
-import { FormComponent } from './empleados/form.component'
+import { FormComponentEmpleado } from './empleados/form.component';
 import { EmpleadoService } from './empleados/empleado.service';
+import { FormComponentCliente } from './clientes/form.component';
 
 const routes: Routes = [
  {path: '', redirectTo:'./home', pathMatch: "full"},
@@ -26,10 +26,11 @@ const routes: Routes = [
  {path: 'nosotros', component: NosotrosComponent},
  {path: 'catalogo', component: CatalogoComponent},
  {path: 'clientes', component: ClientesComponent},
- {path: 'cotizar', component: CotizarComponent},
+ {path: 'clientes/form', component: FormComponentCliente},
+ {path: 'clientes/form/:id', component: FormComponentEmpleado},
  {path: 'empleados', component: EmpleadosComponent},
- { path: 'empleados/form', component: FormComponent},
- {path: 'empleados/form/:id', component:FormComponent}
+ {path: 'empleados/form', component: FormComponentEmpleado}
+
 
 ]
 @NgModule({
@@ -42,9 +43,9 @@ const routes: Routes = [
     ClientesComponent,
     CatalogoComponent,
     HomeComponent,
-    CotizarComponent,
     EmpleadosComponent,
-    FormComponent
+    FormComponentEmpleado,
+    FormComponentCliente
     
   ],
   imports: [

@@ -12,8 +12,9 @@
                     <th>Dirección</th>
                     <th>Teléfono</th>
                     <th>Usuario</th>
-                    <th>Contraseña</th>
                     <th>Ocupación</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
                 <thead>
                     <tr></tr>
@@ -29,8 +30,9 @@
                         <td>{{cliente.direccion}}</td>
                         <td>{{cliente.telefono}}</td>
                         <td>{{cliente.usuario}}</td>
-                        <td>{{cliente.password}}</td>
                         <td>{{cliente.ocupacion}}</td>
+                        <td><input type="button" name="button" class="btn btn-warning" [routerLink]="['/clientes/form',cliente.identificacion]" value="Editar"></td>
+                        <td><input type="button" name="button" class="btn btn-danger" [routerLink]="['/clientes/form',cliente.identificacion]" value="Eliminar"></td>
                     </tr>
                 </tbody>
             </table>
