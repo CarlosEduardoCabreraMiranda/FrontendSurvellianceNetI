@@ -19,17 +19,22 @@ import { FormsModule } from '@angular/forms';
 import { FormComponentEmpleado } from './empleados/form.component';
 import { EmpleadoService } from './empleados/empleado.service';
 import { FormComponentCliente } from './clientes/form.component';
+import { FormComponent } from './catalogo/form.component'
+
 
 const routes: Routes = [
  {path: '', redirectTo:'./home', pathMatch: "full"},
  {path: 'home', component: HomeComponent},
  {path: 'nosotros', component: NosotrosComponent},
  {path: 'catalogo', component: CatalogoComponent},
+ {path: 'catalogo/form', component: FormComponent},
+ {path: 'catalogo/form/:id', component: FormComponent},
  {path: 'clientes', component: ClientesComponent},
  {path: 'clientes/form', component: FormComponentCliente},
- {path: 'clientes/form/:id', component: FormComponentEmpleado},
+ {path: 'clientes/form/:id', component: FormComponentCliente},
  {path: 'empleados', component: EmpleadosComponent},
- {path: 'empleados/form', component: FormComponentEmpleado}
+ {path: 'empleados/form', component: FormComponentEmpleado},
+ {path: 'empleados/form/:id', component: FormComponentEmpleado}
 
 
 ]
@@ -45,8 +50,8 @@ const routes: Routes = [
     HomeComponent,
     EmpleadosComponent,
     FormComponentEmpleado,
-    FormComponentCliente
-    
+    FormComponentCliente,
+    FormComponent
   ],
   imports: [
     BrowserModule,

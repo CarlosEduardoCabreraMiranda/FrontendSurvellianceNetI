@@ -1,0 +1,71 @@
+<div class="container">
+    <h1 style="color: azure">{{titulo}}</h1><BR>
+    <form (ngSubmit)="create()">
+      <div class="mb-3 text-azure">
+        <label for="Identificacion" class="form-label">
+          <p>Identificación</p>
+        </label>
+        <input type="number" id="Identificacion" name="Identificacion" class="form-control"
+          [(ngModel)]="catalogo.codigo_producto" placeholder="">
+      </div>
+  
+      <div class="mb-3 text-azure">
+        <label for="nombre" class="form-label">
+          <p>Nombre</p>
+        </label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="catalogo.nombre"
+          placeholder="">
+      </div>
+  
+      <div class="mb-3 text-azure">
+        <label for="marca" class="form-label">
+          <p>Marca</p>
+        </label>
+        <input type="text" class="form-control" id="marca" name="marca" [(ngModel)]="catalogo.marca"
+          placeholder="">
+      </div>
+  
+      <div class="mb-3 text-azure">
+        <label for="costo" class="form-label">
+          <p>Costo</p>
+        </label>
+        <input type="text" class="form-control" id="costo" name="costo" [(ngModel)]="catalogo.costo"
+          placeholder="">
+      </div>
+  
+      <div class="mb-3 text-azure">
+        <label for="caracteristicas" class="form-label">
+          <p>Caracteristicas</p>
+        </label>
+        <input type="text" class="form-control" id="caracteristicas" name="caracteristicas"
+          [(ngModel)]="catalogo.caracteristicas" placeholder="">
+      </div>
+  
+      <div class="mb-3 text-azure">
+        <label for="garantia" class="form-label">
+          <p>Garantia</p>
+        </label>
+        <input type="text" class="form-control" id="garantia" name="garantia" [(ngModel)]="catalogo.garantia"
+          placeholder="">
+      </div>
+  
+      <div class="mb-3 text-azure">
+        <label for="referencia" class="form-label">
+          <p>Referencia</p>
+        </label>
+        <input type="text" class="form-control" id="referencia" name="referencia" [(ngModel)]="catalogo.referencia"
+          placeholder="">
+      </div>
+  
+      
+      <div class="form-group column">
+        <div class="col-sm-6">
+          <button class="btn btn-warning" role="button" (click)="create()"
+            *ngIf="!catalogo.codigo_producto else elseBlock">Crear</button>
+          <ng-template #elseBlock>
+            <button class="btn btn-dark" role="button" (click)="update()">Editar</button>
+          </ng-template>
+        </div>
+      </div>
+    </form>
+  </div>

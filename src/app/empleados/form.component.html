@@ -44,7 +44,7 @@
       <label for="fecha_nacimiento" class="form-label">
         <p>Fecha de Nacimiento</p>
       </label>
-      <input type="date" class="form-control" id="FNInput" name="fechaNacimiento"
+      <input type="text" class="form-control" id="FNInput" name="fechaNacimiento"
         [(ngModel)]="empleado.fecha_nacimiento" placeholder="">
     </div>
 
@@ -83,7 +83,7 @@
       <label for="fecha_ingreso" class="form-label">
         <p>Fecha de Ingreso</p>
       </label>
-      <input type="date" class="form-control" id="FIInput" name="fechaIngreso" [(ngModel)]="empleado.fecha_ingreso"
+      <input type="text" class="form-control" id="FIInput" name="fechaIngreso" [(ngModel)]="empleado.fecha_ingreso"
         placeholder="">
     </div>
     <div class="mb-3 text-azure">
@@ -100,8 +100,14 @@
       <input type="number" class="form-control" [(ngModel)]="empleado.salario" id="SInput" name="salario"
         placeholder="">
     </div>
-    <div class="mb-3 text-azure">
-      <button class="btn btn-warning" role="button">Guardar</button>
+    <div class="form-group column">
+      <div class="col-sm-6">
+        <button class="btn btn-warning" role="button" (click)="create()"
+          *ngIf="!empleado.identificacion else elseBlock">Crear</button>
+        <ng-template #elseBlock>
+          <button class="btn btn-dark" role="button" (click)="update()">Editar</button>
+        </ng-template>
+      </div>
     </div>
   </form>
 </div>

@@ -13,7 +13,11 @@ export class EmpleadoService {
   private urlEndpoint: string = 'http://localhost:8081/televigilancia/getEmpleados';
   private urlsave: string = 'http://localhost:8081/televigilancia/saveEmpleado';
 
-  private urlupdate: string = 'http://localhost:8081/televigilancia/updateEmpleado/{id}';
+  private urlupdate: string = 'http://localhost:8081/televigilancia/updateEmpleado';
+
+  private urlGetById : string = 'http://localhost:8081/televigilancia/getEmpleado';
+  
+  private urlDeleteEmpleado: string = 'http://localhost:8081/televigilancia/deleteEmpleado';
 
   private httpHeaders = new HttpHeaders({'Content-Type':'application/json'})
 
@@ -30,19 +34,19 @@ export class EmpleadoService {
     return this.http.post<Empleado>(this.urlsave, empleado, { headers: this.httpHeaders });
   }
 
-  //Método para obtener los datos del empleado por Id
-  //getEmpleado(identificacion: any):Observable<Empleado>{
-  //  return this.http.get<Empleado>(`${this.urlEndpoint}/${identificacion}`)
-  //}
+  
+  getEmpleado(identificacion: any):Observable<Empleado>{
+    return this.http.get<Empleado>(`${this.urlGetById}/${identificacion}`)
+  }
 
-  //Método para Actualizar
-  //update(empleado: Empleado):Observable<Empleado>{
-  //  return this.http.put<Empleado>(`${this.urlupdate}/${empleado.identificacion}`,empleado,{headers:this.httpHeaders} )
-  //}
+  
+  update(empleado: Empleado):Observable<Empleado>{
+   return this.http.put<Empleado>(`${this.urlupdate}/${empleado.identificacion}`,empleado,{headers:this.httpHeaders} )
+  }
 
-  //Método para Eliminar
-  //delete(id: number): Observable<Empleado>{
-  //  return this.http.delete<Empleado>(`${this.urlEndpoint}/${id}`,{headers:this.httpHeaders})
-  //}
+  
+  delete(id: number): Observable<Empleado>{
+   return this.http.delete<Empleado>(`${this.urlDeleteEmpleado}/${id}`,{headers:this.httpHeaders})
+  }
 }
 

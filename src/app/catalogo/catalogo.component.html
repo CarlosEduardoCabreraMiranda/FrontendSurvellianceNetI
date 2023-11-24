@@ -3,24 +3,28 @@
             <div class="table-responsive table-bordered ">
                 <table class="table align-middle table-light">
                     <th>codigo</th>
-                    <th>Marca</th>
                     <th>Nombre</th>
+                    <th>Marca</th>
                     <th>Costo</th>
                     <th>Caracteristicas</th>
                     <th>Garantia</th>
                     <th>Referencia</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                     <thead>
                         <tr></tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let producto of catalogos ">
-                            <td>{{producto.codigoProducto}}</td>
-                            <td class="text-hover">{{producto.nombre}}</td>
-                            <td>{{producto.marca}}</td>
-                            <td>{{producto.costo}}</td>
-                            <td>{{producto.caracteristicas}}</td>
-                            <td>{{producto.garantia}}</td>
-                            <td>{{producto.referencia}}</td>
+                      <tr *ngFor="let catalogo of catalogos ">
+                            <td>{{catalogo.codigo_producto}}</td>
+                            <td class="text-hover">{{catalogo.nombre}}</td>
+                            <td>{{catalogo.marca}}</td>
+                            <td>{{catalogo.costo}}</td>
+                            <td>{{catalogo.caracteristicas}}</td>
+                            <td>{{catalogo.garantia}}</td>
+                            <td>{{catalogo.referencia}}</td>
+                            <td><input type="button" name="button" class="btn btn-warning" [routerLink]="['/catalogo/form',catalogo.codigo_producto]" value="Editar"></td>
+                        <td><input type="button" name="button" class="btn btn-danger" (click)="delete(cliente)" value="Eliminar"></td>
                         </tr>
                        
                     </tbody>

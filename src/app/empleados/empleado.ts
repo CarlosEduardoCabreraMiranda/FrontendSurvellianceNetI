@@ -1,5 +1,5 @@
 export class Empleado {
-    identificacion!: string;
+    identificacion!: number;
     primer_nombre!: string;
     segundo_nombre!: string;
     primer_apellido!: string;

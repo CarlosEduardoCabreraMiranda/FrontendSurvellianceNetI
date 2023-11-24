@@ -1,11 +1,11 @@
 export class Catalogo {
-    codigoProducto!: number;
-    marca!: string;
+    codigo_producto!: number;
     nombre!: string;
+    marca!: string;
     costo!: string;
     caracteristicas!: string;
     garantia!:string;
-    referencia!: string
+    referencia!: string;
 }
 
 /*
